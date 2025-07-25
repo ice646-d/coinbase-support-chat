@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom Coinbase colors
+				'coinbase-blue': 'hsl(var(--coinbase-blue))',
+				'coinbase-blue-dark': 'hsl(var(--coinbase-blue-dark))',
+				'coinbase-blue-light': 'hsl(var(--coinbase-blue-light))',
+				success: 'hsl(var(--success))',
+				warning: 'hsl(var(--warning))',
+				info: 'hsl(var(--info))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
