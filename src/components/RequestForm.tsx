@@ -68,7 +68,7 @@ const RequestForm = () => {
       
       toast({
         title: "✅ Request Submitted Successfully!",
-        description: "Our support team will get back to you within 2-4 hours."
+        description: "Our support team will get back to you within 2-4 hours. For immediate assistance, click the live chat button below."
       });
       
       // Reset form
