@@ -31,10 +31,13 @@ const Navigation = () => {
                 <Search size={16} />
                 <span>FAQs</span>
               </a>
-              <a href="#live-chat" className="flex items-center space-x-1 text-foreground hover:text-coinbase-blue transition-colors">
+              <button 
+                onClick={() => window.Chaport && window.Chaport('openChat')} 
+                className="flex items-center space-x-1 text-foreground hover:text-coinbase-blue transition-colors"
+              >
                 <MessageCircle size={16} />
                 <span>Live Chat</span>
-              </a>
+              </button>
               <a href="#contact" className="flex items-center space-x-1 text-foreground hover:text-coinbase-blue transition-colors">
                 <Phone size={16} />
                 <span>Contact</span>
@@ -46,7 +49,11 @@ const Navigation = () => {
             <Button variant="coinbase-outline" size="sm">
               Submit Request
             </Button>
-            <Button variant="coinbase" size="sm">
+            <Button 
+              variant="coinbase" 
+              size="sm"
+              onClick={() => window.Chaport && window.Chaport('openChat')}
+            >
               Live Chat
             </Button>
           </div>

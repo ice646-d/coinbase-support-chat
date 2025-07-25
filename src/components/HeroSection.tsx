@@ -31,11 +31,25 @@ const HeroSection = () => {
           
           {/* Quick Actions */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer">
-              <MessageCircle className="w-12 h-12 text-white mx-auto mb-4" />
+            <div 
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer group"
+              onClick={() => window.Chaport && window.Chaport('openChat')}
+            >
+              <div className="relative">
+                <MessageCircle className="w-12 h-12 text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+              </div>
               <h3 className="text-xl font-semibold text-white mb-2">Live Chat</h3>
-              <p className="text-white/80 mb-4">Get instant support from our team</p>
-              <Button variant="coinbase-outline" className="bg-white/20 border-white/40 text-white hover:bg-white hover:text-coinbase-blue">
+              <p className="text-white/80 mb-4">Get instant support from our team • Average response: 2 minutes</p>
+              <Button 
+                variant="coinbase-outline" 
+                className="bg-white/20 border-white/40 text-white hover:bg-white hover:text-coinbase-blue"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.Chaport && window.Chaport('openChat');
+                }}
+              >
+                <MessageCircle size={16} className="mr-2" />
                 Start Chat
               </Button>
             </div>
